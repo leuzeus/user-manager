@@ -1,6 +1,6 @@
 <?php
 
-namespace Clesel\SubsUser\CLI;
+namespace App\CLI;
 
 use Symfony\Component\Console\Command\Command;
 

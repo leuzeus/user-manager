@@ -3,8 +3,9 @@
 namespace App\Infrastructure\InMemory;
 
 use App\Domain\Entity\User;
+use App\Domain\Repository\interface\UserRepositoryInterface;
 
-class UserRepository
+class UserRepository implements UserRepositoryInterface
 {
     private array $users = [];
     private int $counter = 0;

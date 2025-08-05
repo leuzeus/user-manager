@@ -3,8 +3,9 @@
 namespace App\Infrastructure\InMemory;
 
 use App\Domain\Entity\Product;
+use App\Domain\Repository\interface\ProductRepositoryInterface;
 
-class ProductRepository
+class ProductRepository implements ProductRepositoryInterface
 {
     private array $products = [];
     private int $counter = 0;

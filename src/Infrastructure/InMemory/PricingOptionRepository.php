@@ -4,8 +4,9 @@ namespace App\Infrastructure\InMemory;
 
 use App\Domain\Entity\PricingOption;
 use App\Domain\Entity\Product;
+use App\Domain\Repository\interface\PricingOptionRepositoryInterface;
 
-class PricingOptionRepository
+class PricingOptionRepository implements PricingOptionRepositoryInterface
 {
     private array $options = [];
     private int $counter = 0;

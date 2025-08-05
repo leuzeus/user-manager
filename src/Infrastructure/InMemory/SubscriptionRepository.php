@@ -2,11 +2,12 @@
 
 namespace App\Infrastructure\InMemory;
 
-use App\Domain\Entity\Subscription;
 use App\Domain\Entity\Customer;
 use App\Domain\Entity\PricingOption;
+use App\Domain\Entity\Subscription;
+use App\Domain\Repository\interface\SubscriptionRepositoryInterface;
 
-class SubscriptionRepository
+class SubscriptionRepository implements SubscriptionRepositoryInterface
 {
     private array $subscriptions = [];
     private int $counter = 0;

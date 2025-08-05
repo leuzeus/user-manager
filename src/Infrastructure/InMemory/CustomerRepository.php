@@ -4,8 +4,9 @@ namespace App\Infrastructure\InMemory;
 
 use App\Domain\Entity\Customer;
 use App\Domain\Entity\User;
+use App\Domain\Repository\interface\CustomerRepositoryInterface;
 
-class CustomerRepository
+class CustomerRepository implements CustomerRepositoryInterface
 {
     private array $customers = [];
     private int $counter = 0;
