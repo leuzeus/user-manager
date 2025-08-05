@@ -144,4 +144,5 @@ The architecture is loosely inspired by (but not copying) a Laravel solution whi
   https://chatgpt.com/share/68922d69-7090-8002-a250-18064a53c876
   https://chatgpt.com/share/68922dbc-dbc0-8002-aaf6-ee13428f8565
   https://chatgpt.com/share/68922dde-de20-8002-861e-a1dbfd5ed684
+  https://chatgpt.com/share/68923235-9f04-8002-9bf9-c57101a3b5be
     
