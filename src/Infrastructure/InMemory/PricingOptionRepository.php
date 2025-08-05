@@ -4,12 +4,12 @@ namespace App\Infrastructure\InMemory;
 
 use App\Domain\Entity\PricingOption;
 use App\Domain\Entity\Product;
-use App\Domain\Repository\interface\PricingOptionRepositoryInterface;
+use App\Domain\Repository\PricingOptionRepositoryInterface;
 
 class PricingOptionRepository implements PricingOptionRepositoryInterface
 {
     private array $options = [];
-    private int $counter = 0;
+    private int $counter = 1;
 
     public function add(Product $product, string $name, int $duration, float $price, string $currency = 'USD'): PricingOption
     {

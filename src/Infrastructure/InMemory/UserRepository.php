@@ -3,12 +3,12 @@
 namespace App\Infrastructure\InMemory;
 
 use App\Domain\Entity\User;
-use App\Domain\Repository\interface\UserRepositoryInterface;
+use App\Domain\Repository\UserRepositoryInterface;
 
 class UserRepository implements UserRepositoryInterface
 {
     private array $users = [];
-    private int $counter = 0;
+    private int $counter = 1;
 
     public function add(string $username, string $role): User
     {

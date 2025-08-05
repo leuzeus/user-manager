@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Repository\interface;
+namespace App\Domain\Repository;
 
 use App\Domain\Entity\Product;
 

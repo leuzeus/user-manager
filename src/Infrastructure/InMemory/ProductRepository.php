@@ -3,12 +3,12 @@
 namespace App\Infrastructure\InMemory;
 
 use App\Domain\Entity\Product;
-use App\Domain\Repository\interface\ProductRepositoryInterface;
+use App\Domain\Repository\ProductRepositoryInterface;
 
 class ProductRepository implements ProductRepositoryInterface
 {
     private array $products = [];
-    private int $counter = 0;
+    private int $counter = 1;
 
     public function add(string $name, ?string $description = null): Product
     {

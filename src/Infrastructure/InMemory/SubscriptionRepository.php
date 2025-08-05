@@ -5,12 +5,12 @@ namespace App\Infrastructure\InMemory;
 use App\Domain\Entity\Customer;
 use App\Domain\Entity\PricingOption;
 use App\Domain\Entity\Subscription;
-use App\Domain\Repository\interface\SubscriptionRepositoryInterface;
+use App\Domain\Repository\SubscriptionRepositoryInterface;
 
 class SubscriptionRepository implements SubscriptionRepositoryInterface
 {
     private array $subscriptions = [];
-    private int $counter = 0;
+    private int $counter = 1;
 
     public function add(Customer $customer, PricingOption $pricingOption, \DateTimeImmutable $start): Subscription
     {
