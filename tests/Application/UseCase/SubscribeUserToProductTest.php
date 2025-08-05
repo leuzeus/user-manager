@@ -63,4 +63,17 @@ class SubscribeUserToProductTest extends TestCase
         $this->expectException(\InvalidArgumentException::class);
         $this->useCase->handle($customer->id, 999);
     }
+
+    public function testSubscriptionExpiresAfterEndDate(): void
+    {
+        $user = $this->userRepo->add('expired_user', 'customer');
+        $customer = $this->customerRepo->add($user, 'Expired User');
+        $product = $this->productRepo->add('Old Product');
+        $pricing = $this->pricingRepo->add($product, 'Monthly', 30, 19.99);
+
+        $now = new \DateTimeImmutable('-40 days');
+        $subscription = $this->subscriptionRepo->add($customer, $pricing, $now);
+
+        $this->assertFalse($subscription->isActive(new \DateTimeImmutable()));
+    }
 }

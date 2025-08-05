@@ -25,4 +25,5 @@ class Subscription
     {
         return !($this->isCancelled || $date > $this->endDate);
     }
+
 }

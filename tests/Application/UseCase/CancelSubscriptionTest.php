@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Tests\Application\UseCase;
+namespace App\Tests\Application\UseCase\Application\UseCase;
 
 use App\Application\UseCase\CancelSubscription;
 use App\Domain\Entity\Customer;

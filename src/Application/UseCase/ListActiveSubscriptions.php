@@ -15,11 +15,11 @@ class ListActiveSubscriptions
     ) {}
 
     /**
-     * Retourne la liste des abonnements actifs d’un client donné.
+     * Return a list of active Subscriptions from one user.
      *
      * @param int $customerId
      * @return Subscription[]
-     * @throws InvalidArgumentException si le customer est introuvable
+     * @throws InvalidArgumentException If the customer is not found
      */
     public function handle(int $customerId): array
     {

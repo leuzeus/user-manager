@@ -59,6 +59,10 @@ class DemoCommand extends Command
                 $output->writeln("Subscription #{$s->id} — {$s->pricingOption->name}");
             }
 
+            if(count($subs)){
+                $output->writeln('Active subscriptions for customer');
+            }
+
             $output->writeln("\nCancelling subscription...");
             $this->cancel->handle($subscription->id);
             $output->writeln("Subscription #{$subscription->id} cancelled");
@@ -72,6 +76,8 @@ class DemoCommand extends Command
                     $output->writeln("Subscription #{$s->id} is still active (end: {$s->endDate->format('Y-m-d')})");
                 }
             }
+
+            $output->writeln("\nDemo completed");
 
             return Command::SUCCESS;
 
