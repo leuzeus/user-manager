@@ -46,7 +46,7 @@ class SubscribeUserToProductTest extends TestCase
         $this->assertNotNull($subscription);
         $this->assertSame($customer->id, $subscription->customer->id);
         $this->assertSame($pricing->id, $subscription->pricingOption->id);
-        $this->assertTrue($subscription->isActive);
+        $this->assertTrue($subscription->isActive());
     }
 
     public function testItFailsWithUnknownCustomer(): void
