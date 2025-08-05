@@ -32,6 +32,13 @@ class SubscriptionRepository implements SubscriptionRepositoryInterface
         });
     }
 
+    public function getAllByCustomer(Customer $customer): array
+    {
+        return array_values(array_filter($this->subscriptions, function (Subscription $s) use ($customer) {
+            return $s->customer->id === $customer->id;
+        }));
+    }
+
     public function cancel(int $subscriptionId): bool
     {
         if (!isset($this->subscriptions[$subscriptionId])) return false;

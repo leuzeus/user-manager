@@ -17,6 +17,11 @@ class UserRepository implements UserRepositoryInterface
         return $user;
     }
 
+    public function remove(int $id): void
+    {
+        unset($this->users[$id]);
+    }
+
     public function getById(int $id): ?User
     {
         return $this->users[$id] ?? null;
