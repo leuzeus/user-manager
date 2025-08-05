@@ -2,7 +2,10 @@
 
 namespace Clesel\SubsUser\CLI;
 
-class CancelSubscriptionCommand
+use Symfony\Component\Console\Command\Command;
+
+#[AsCommand(name: 'app:cancel-subscription')]
+class CancelSubscriptionCommand extends Command
 {
 
 }

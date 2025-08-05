@@ -2,7 +2,11 @@
 
 namespace Clesel\SubsUser\CLI;
 
-class SubscribeCommand
+use Symfony\Component\Console\Attribute\AsCommand;
+use Symfony\Component\Console\Command\Command;
+
+#[AsCommand(name: 'app:subscribe')]
+class SubscribeCommand extends Command
 {
 
 }
