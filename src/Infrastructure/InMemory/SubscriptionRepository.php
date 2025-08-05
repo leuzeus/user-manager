@@ -41,8 +41,12 @@ class SubscriptionRepository implements SubscriptionRepositoryInterface
 
     public function cancel(int $subscriptionId): bool
     {
-        if (!isset($this->subscriptions[$subscriptionId])) return false;
-        $this->subscriptions[$subscriptionId]->cancel();
+        $subscription = $this->getById($subscriptionId);
+        if (!$subscription || !$subscription->isActive()) {
+            return false;
+        }
+
+        $subscription->cancel();
         return true;
     }
 
